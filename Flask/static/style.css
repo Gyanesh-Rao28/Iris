@@ -21,8 +21,14 @@ body {
   background-color: #FFF;
 }
 
+.check a{
+  list-style: none;
+  color: #FFF;
+  text-decoration: none;
+}
+
 .check:hover {
-  color: #6c63ff;
+  color: #fff;
   background-color: transparent;
   border: 2px solid #6c63ff;
 }
@@ -119,12 +125,11 @@ body {
 
 
 #video-frame {
-  transform: translate(120px, 120px);
+  transform: translate(120px, 85px);
   scale: 2;
   border: 2px solid #6c63ff;
 }
 
-#check a {
-  text-decoration: none;
-  color: #FFF;
+.room{
+  transform: translateX(170px);
 }
