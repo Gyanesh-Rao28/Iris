@@ -19,14 +19,15 @@
     <div class="container">
       <div class="header-area">
         <div class="logo">
-          <h1>Iris</h1>
+          <h1 class="logo-svg">Iris</h1>
         </div>
         <ul class="links">
           <li>Home</li>
           <li>About Us</li>
           <li>Work</li>
           <li>Info</li>
-          <li class="check btn"><a href="http://172.24.160.1:5500/index.html"> Login/ SignUp</a></li>
+          <li class="check btn" style="background: linear-gradient(to right, rgb(5,114,210), rgb(38,205,252)); "><a
+              href="http://172.24.160.1:5500/index.html"> Login/ SignUp</a></li>
         </ul>
       </div>
       <div class="main-container"></div>
@@ -38,16 +39,28 @@
         <p style="text-align: end;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil
           ullam nesciunt quidem iste,
           Repellendus odit nihil</p>
-        <button class="check btn">Check</button>
-        <button class="room btn">Room 
-          <i class="fas fa-caret-down"></i>
-        </button>
+        <button class="check btn" id="checkout">Check</button>
+        <label class="dropdown">
+
+          <div class="dd-button check btn">
+            Room
+          </div>
+
+          <input type="checkbox" class="dd-input  id=" test">
+
+          <ul class="dd-menu">
+            <li value="W-201" class="w">W-201</li>
+            <li value="W-202" class="w">W-202</li>
+            <li value="W-203" class="w">W-203</li>
+          </ul>
+        </label>
       </div>
+
       <div class="image">
+        <h2>Room: <span class="room-display">W-</span></h2>
         <img id="video-frame" src="{{ url_for('video') }}" width="50%" />
       </div>
     </div>
-  </div>
   </div>
 
   <!-- <div id="video">
@@ -55,7 +68,7 @@
       <button id="go-live">Go Live</button>
     </div> -->
 
-  <script src='app.js'></script>
+  <script src={{ url_for('static', filename='app.js' ) }} /></script>
 </body>
-
+<!-- <link rel="stylesheet" href={{ url_for('static', filename='app.js' ) }} /> -->
 </html>
